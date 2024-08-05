@@ -1,11 +1,9 @@
-const CarCard = ({car}) => {
-
-  console.log({car})
+const CarCard = ({make, model}) => {
 
 
   return (
     <div className="car-card">
-      <h2>{`${car.make} - ${car.model} - ${car.class}`}</h2>
+      <h2>{`${make} - ${model}s`}</h2>
       {/* <h2>Um carro</h2> */}
     </div>
   )

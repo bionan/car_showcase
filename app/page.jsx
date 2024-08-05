@@ -46,7 +46,7 @@ export default async function Home() {
                 {
                   allCars.map(
                     (car,index) => {
-                      return <CarCard key={index} car={car} />}
+                      return <CarCard key={index} {...car} />}
                   )
                 }
               </div>
