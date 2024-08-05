@@ -60,7 +60,14 @@ const CarCard = ({city_mpg,year,make,model,transmission,drive}) => {
           </div>
         </div>
 
-
+        <div className="car-card__btn-container">
+          <CustomButton 
+          title="View More" 
+          containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+          textStyles="font-bold text-white text-[14px] leading-[17px]"
+          handleClick={() => {setIsOpen(true)}}
+          />
+        </div>
 
       </div>
 
