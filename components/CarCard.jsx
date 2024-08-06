@@ -6,10 +6,13 @@ import Image from "next/image"
 
 import CustomButton from "@components/CustomButton"
 import { calculateCarRent } from "@utils"
+import CarDetails from "@components/CarDetails"
 
-const CarCard = ({city_mpg,year,make,model,transmission,drive}) => {
+const CarCard = ({car}) => {
 
   const [isOpen, setIsOpen] = useState(false)
+
+  const {city_mpg,year,make,model,transmission,drive} = car
 
   return (
     <div className="car-card group">
@@ -71,6 +74,7 @@ const CarCard = ({city_mpg,year,make,model,transmission,drive}) => {
 
       </div>
 
+      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
 
     </div>
   )
