@@ -66,7 +66,7 @@ const SearchBar = () => {
 
     console.log(newPathname)
 
-    router.push(newPathname)
+    router.push(newPathname, {scroll:false})
 
   }
   

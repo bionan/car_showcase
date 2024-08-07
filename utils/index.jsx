@@ -1,6 +1,6 @@
 
 
-export async function fetchCars() {
+export async function fetchCars({manufacturer, year, fuel, limit, model}) {
 
   const headers = {
     'X-RapidAPI-Key': '740a79285emsh692dbaf27bef844p1373efjsn1b4a1cf4e839',
@@ -9,7 +9,7 @@ export async function fetchCars() {
 
   try {
     
-      const response = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla', {
+      const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=${model}&make=${manufacturer}&year=${year}&fuel_type=${fuel}&limit=${limit}`, {
         headers: headers,
         method: 'GET',
       })
