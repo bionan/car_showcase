@@ -36,11 +36,11 @@ const CarDetails = ({isOpen, closeModal, car}) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="relative bg-white w-full max-w-lg max-h-[90vh] overflow-y-auto text-left rounded-2xl shadow-xsl transition-all flex gap-5 p-6 flex-col">
+            <Dialog.Panel className="relative bg-white w-full max-w-lg max-h-[90vh] overflow-y-auto text-left rounded-2xl shadow-xl transition-all flex gap-5 p-6 flex-col">
               <button 
                 type="button" 
                 onClick={closeModal}
-                className="absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full "
+                className="absolute top-2 right-2 z-10 w-fit p-2  rounded-full "
                 >
                 <Image 
                   src="/close.svg" 
@@ -78,7 +78,7 @@ const CarDetails = ({isOpen, closeModal, car}) => {
                   {`${car.make} ${car.model}`}
                 </h2>
 
-                <div className="mt-3 flex flex-wrap gap-4 bg-blue-100">
+                <div className="mt-3 flex flex-wrap gap-4">
 
                   {Object.entries(car).map(
                     ([key,value]) => {
